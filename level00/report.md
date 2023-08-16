@@ -12,5 +12,7 @@ If the condition is met, it allocates memory for the string "/bin/sh," sets user
  Otherwise, it prints "No !" to the standard error stream
 
 4. How to find the password:
-When give to the program `423` as argument it launch a shell with  rights to display the file `.pass`<br/>
+When give to the program `423` as argument it launch a shell
+That shell it laucnh with rights to display file `/home/user/level1/.pass`<br/>
 `cat /home/user/level1/.pass` output : `1fe8a524fa4bec01ca4ea2a869af2a02260d4a7d5fe7e7c24d8617e6dca12d3a`
+![Alt password](password.png)
