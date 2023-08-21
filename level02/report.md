@@ -15,4 +15,5 @@
 I used `ltrace ./level2` to get the return address of strdup `0x0804a008` 
 
 4. ## Exploit the buffer overflow 
-![Alt Exploit](find.png)
+![Alt Exploit](find.png)<br/>
+Password : `492deb0e7d14c4b5695173cca843c4384fe52d0857c2b0718e1a521a4d33ec02`
