@@ -11,8 +11,8 @@ Buffer content `aaaaaa` is at the 4th position `61616161`.
 ![Alt Buffer position](buffer_position.png)
 
 
-2. ## Modify `m` value s<br/>
-The modifier %n will write the number of bytes specified in the choosen address.
+## 2. Modify `m` value s<br/>
+The modifier %n will write the number of bytes specified in the choosen address.<br/>
 The command `python -c 'print "\x8c\x95\x08\x08" + "\x90" * 60 + "%4$n"' > /tmp/payload` <br/>
 creates a format string attack that aims to modify a variable using the %n<br/> 
 The `%4$n` specifier tells printf to treat the argument at the  4th position as an address to write the number of characters printed<br/>
