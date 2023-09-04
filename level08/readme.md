@@ -5,8 +5,9 @@ The goal of exploiting the vulnerability in the program called "level8" is to ga
 
 
 **Process**:  
->   the idea it's to make three malloc, then  from the first pointer you can read what is on the second, and vice versa. Just read further than what has been allocated
->   initially auth point on the first alloc addr `x804a008` 
+>   the idea it's to make three malloc, then  from the first pointer you can read what is on the second, and vice versa.<br/> 
+>   Just read further than what has been allocated<br/>
+>   Initially auth point on the first alloc addr `x804a008` <br/>
 
 ![Alt alloc](alloc.png)
 
