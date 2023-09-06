@@ -1,19 +1,21 @@
-# Walkthrough 
+# Walkthrough
 
- 1. After connected to level00
-Copy the executable to host machine with follow command line `scp -P 4242 level0@192.168.56.104:/home/user/level0/level0 .` 
- 
-2. Make reverse engineering with Githdra <br/>
-Retrieved  source file in C language 
-![Alt Ghidra](level00.png)
+**Main** : 
+This program checking if an integer value from the command line is equal to 0x1a7 (423 in decimal).  
+If the condition is met, it allocates memory for the string "/bin/sh," sets user and group IDs, and then executes the shell.  
+Otherwise, it prints "No !" to the standard error stream
 
-3. Analyse the source program<br/>
-This program  checking if an integer value from the command line is equal to 0x1a7 (423 in decimal).<br/>
-If the condition is met, it allocates memory for the string "/bin/sh," sets user and group IDs, and then executes the shell.<br/>
- Otherwise, it prints "No !" to the standard error stream
+**Process**:  
+>   Make reverse engineering with Githdra  retrieved source file in C language to analyse it
+>   Run the program with given argument
 
-4. How to find the password:<br/>
-When give to the program `423` as argument it launch a shell
-That shell it laucnh with rights to display file `/home/user/level1/.pass`<br/>
-`cat /home/user/level1/.pass` output : `1fe8a524fa4bec01ca4ea2a869af2a02260d4a7d5fe7e7c24d8617e6dca12d3a`
-![Alt password](password.png)
+
+## How to find the password:  
+When give to the program `423` as argument it launch a shell that shell it laucnh with rights to display file 
+```
+
+level0@RainFall:~$ ./level0 423
+$ cat /home/user/level1/.pass
+1fe8a524fa4bec01ca4ea2a869af2a02260d4a7d5fe7e7c24d8617e6dca12d3a
+
+```
